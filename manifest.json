@@ -1,0 +1,16 @@
+{
+
+    "description": "Example Pioneer v2 study.",
+    "manifest_version": 2,
+    "name": "Pioneer-v2",
+    "version": "1.0",
+    "homepage_url": "https://github.com/rhelmer/pioneer-v2-example",
+    "permissions": [
+      "telemetry"
+    ],
+
+    "browser_action": {
+      "default_title": "Pioneer",
+      "default_popup": "popup/pioneer.html"
+    }
+}
