@@ -13,5 +13,5 @@ browser.browserAction.onClicked.addListener(async () => {
 
   await browser.telemetry.submitPing(pingType, payload, options);
 
-  console.info("Telemetry sent, check about:telemetry");
+  console.info("Telemetry recorded, check about:telemetry");
 });
