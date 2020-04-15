@@ -1,25 +1,24 @@
-if (browser.telemetry) {
-  submitTelemetry().then().catch(ex => console.error(`Telemetry submission failed: ${ex}`));
-} else {
-  console.error("No browser.telemetry API available, is this extension privileged?");
+async function submitTelemetry() {
+  if (!(await browser.telemetry.canUpload())) {
+    console.debug("telemetry upload disabled.");
+    throw "Telemetry upload is disabled.";
+  }
+
+  browser.telemetry.useEncryption = true;
+
+  const pingType = "pioneer-v2";
+  const payload = { pioneerId: "my-pioneer-id" };
+  const options = { useEncryption: true };
+
+  return await browser.telemetry.submitPing(pingType, payload, options);
 }
 
-async function submitTelemetry() {
-  const canUpload = await browser.telemetry.canUpload();
-  if (!canUpload) {
-    throw Exception("Telemetry upload is disabled.")
-  }
-
-  const checkEncryption = async () => {
-    const encryptionUsed = await browser.telemetry.useEncryption;
-    if (encryptionUsed) {
-      console.debug("Encryption is enabled.");
-    } else {
-      console.debug("Encryption is disabled.");
-    }
-  }
-
-  checkEncryption();
-  browser.telemetry.useEncryption = true;
-  checkEncryption();
+if (browser.telemetry) {
+  submitTelemetry()
+    .then((result) => console.info(`Telemetry submission finished.`))
+    .catch((error) => console.error(`Telemetry submission failed: ${error}`));
+} else {
+  console.error(
+    "No browser.telemetry API available, is this extension privileged?"
+  );
 }
