@@ -9,7 +9,10 @@
     ],
 
     "browser_action": {
-      "default_title": "Pioneer",
-      "default_popup": "popup/pioneer.html"
+      "default_title": "Pioneer"
+    },
+
+    "background": {
+      "scripts": ["background.js"]
     }
 }
