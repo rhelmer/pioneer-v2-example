@@ -1,4 +1,4 @@
-sh```
+```
  web-ext run --pref=extensions.experiments.enabled=true --browser-console --firefox-binary ~/src/mozilla-unified/obj-x86_64-apple-darwin18.7.0/dist/Nightly.app/Contents/MacOS/firefox
 ```
 
