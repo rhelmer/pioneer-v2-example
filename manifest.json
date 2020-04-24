@@ -1,34 +1,38 @@
 {
-    "description": "Example Pioneer v2 study.",
-    "manifest_version": 2,
-    "name": "Pioneer-v2",
-    "version": "1.0",
-    "homepage_url": "https://github.com/rhelmer/pioneer-v2-example",
+  "description": "Example Pioneer v2 study.",
+  "manifest_version": 2,
+  "name": "Pioneer-v2",
+  "version": "1.0",
+  "homepage_url": "https://github.com/rhelmer/pioneer-v2-example",
 
-    "permissions": [
-      "telemetry"
-    ],
-
-    "telemetry": {
-      "pioneer_id": true,
-      "ping_type": "pioneer-v2-study",
-      "public_key": {
-          "id": "pioneer-dev-20200423",
-          "key": {
-          "crv": "P-256",
-          "ext": true,
-          "kty": "EC",
-          "x": "hZSThsLsO4EU061L8DGIIIs-v8TDS14xyNc2l5yA6Ps",
-          "y": "EK4a7Rlm65nRsiRwMIuvyvQOoKvWHbVo7d2uzAAhi-Q"
-        }
-      }
-    },
-
-    "browser_action": {
-      "default_title": "Pioneer"
-    },
-
-    "background": {
-      "page": "background.html"
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "pioneer-v2-example@example.com",
+      "strict_min_version": "77.0a1"
     }
+  },
+
+  "permissions": ["telemetry"],
+
+  "telemetry": {
+    "pioneer_id": true,
+    "ping_type": "pioneer-study",
+    "public_key": {
+      "id": "pioneer-dev-20200423",
+      "key": {
+        "crv": "P-256",
+        "kty": "EC",
+        "x": "Qqihp7EryDN2-qQ-zuDPDpy5mJD5soFBDZmzPWTmjwk",
+        "y": "PiEQVUlywi2bEsA3_5D0VFrCHClCyUlLW52ajYs-5uc"
+      }
+    }
+  },
+
+  "browser_action": {
+    "default_title": "Pioneer"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  }
 }
