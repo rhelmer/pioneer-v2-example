@@ -17,6 +17,8 @@
   "telemetry": {
     "pioneer_id": true,
     "ping_type": "pioneer-study",
+    "schemaName": "schema-name",
+    "schemaNamespace": "schema-namespace",
     "public_key": {
       "id": "pioneer-dev-20200423",
       "key": {
