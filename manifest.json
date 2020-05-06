@@ -16,6 +16,7 @@
 
   "telemetry": {
     "pioneer_id": true,
+    "study_name": "pioneer-v2-example",
     "ping_type": "pioneer-study",
     "schemaName": "schema-name",
     "schemaNamespace": "schema-namespace",
