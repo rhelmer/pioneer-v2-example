@@ -20,6 +20,7 @@
     "ping_type": "pioneer-study",
     "schemaName": "debug",
     "schemaNamespace": "pioneer-debug",
+    "schemaVersion": "1",
     "public_key": {
       "id": "pioneer-v2-study",
       "key": {
