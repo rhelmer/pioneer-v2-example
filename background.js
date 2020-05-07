@@ -1,8 +1,10 @@
 browser.browserAction.onClicked.addListener(async () => {
+  const currentDate = new Date();
+
   const payload = {
-    key1: "value1",
-    key2: "value2",
-  };
+    "datetime": currentDate
+  }
+
   await browser.telemetry.submitEncryptedPing(payload);
   console.info("Telemetry submitted, check about:telemetry");
 });

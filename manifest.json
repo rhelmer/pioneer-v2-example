@@ -21,7 +21,7 @@
     "schemaName": "schema-name",
     "schemaNamespace": "schema-namespace",
     "public_key": {
-      "id": "pioneer-dev-20200423",
+      "id": "pioneer-v2-study",
       "key": {
         "crv": "P-256",
         "kty": "EC",
