@@ -32,6 +32,11 @@
     }
   },
 
+  "icons": {
+    "48": "images/pioneer10-patch-48.png",
+    "96": "images/pioneer10-patch-96.png"
+  },
+
   "browser_action": {
     "default_title": "Pioneer"
   },
