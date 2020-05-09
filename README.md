@@ -2,7 +2,7 @@
 
 An example web extension for Pioneer v2 studies.
 
-Until support is landed in Firefox, this requires a [custom build](https://treeherder.mozilla.org/#/jobs?repo=try&selectedTaskRun=DifN-0KVSVefDIHXhpA-7A-0&revision=eb6acecfb17517de5daa184f41e9272d4a9c124a) with support for the [new encryption options](https://bugzilla.mozilla.org/show_bug.cgi?id=1634557):
+Until support is landed in Firefox, this requires a [custom build](https://treeherder.mozilla.org/#/jobs?repo=try&revision=9022385045c73e1ff654246fdc97891c28ef3844) with support for the [new `browser.telemetry.submitEncryptedPing` WebExtension API](https://bugzilla.mozilla.org/show_bug.cgi?id=1634557):
 ```console
 FIREFOX_BINARY="/Applications/Firefox Nightly 2.app/Contents/MacOS/firefox"
 TELEMETRY_SERVER="https://stage.ingestion.nonprod.dataops.mozgcp.net"
