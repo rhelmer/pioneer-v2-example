@@ -16,6 +16,6 @@ web-ext run --pref=toolkit.telemetry.server="${TELEMETRY_SERVER}" \
             --firefox-binary "${FIREFOX_BINARY}"
  ```
 
- The schema is defined in [the Mozilla pipeline schema repository](https://github.com/mozilla-services/mozilla-pipeline-schemas/tree/master/schemas/pioneer-debug/debug). In this case `pioneer-debug` is the schema namespace and `debug` is the schema name. These are defined in [manifest.json](../blob/master/manifest.json).
+ The schema is defined in [the Mozilla pipeline schema repository](https://github.com/mozilla-services/mozilla-pipeline-schemas/tree/master/schemas/pioneer-debug/debug). In this case `pioneer-debug` is the schema namespace and `debug` is the schema name. These are defined in [manifest.json](master/manifest.json).
 
 To see extra details on what Firefox Telemetry is doing, enable Trace log level: `toolkit.telemetry.log.level=Trace`
