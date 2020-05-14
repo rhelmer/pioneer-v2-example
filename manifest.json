@@ -22,7 +22,7 @@
     "schemaNamespace": "pioneer-debug",
     "schemaVersion": 1,
     "public_key": {
-      "id": "pioneer-v2-study",
+      "id": "debug",
       "key": {
         "crv": "P-256",
         "kty": "EC",
