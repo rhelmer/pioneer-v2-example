@@ -5,6 +5,11 @@ browser.browserAction.onClicked.addListener(async () => {
     "datetime": currentDate
   }
 
-  await browser.telemetry.submitEncryptedPing(payload);
+  const options = {
+    "schemaName": "debug",
+    "schemaVersion": 1
+  };
+
+  await browser.telemetry.submitEncryptedPing(payload, options);
   console.info("Telemetry submitted, check about:telemetry");
 });
