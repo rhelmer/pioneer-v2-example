@@ -2,7 +2,7 @@
 
 An example web extension for Pioneer v2 studies.
 
-This requires [Firefox Nightly](https://nightly.mozilla.org) 78.0a1 (2020-05-16) or newer, which supports the [new `browser.telemetry.submitEncryptedPing` WebExtension API](https://bugzilla.mozilla.org/show_bug.cgi?id=1634557):
+This requires [Firefox Nightly](https://nightly.mozilla.org) 78.0a1 (2020-05-17) or newer, which supports the [new `browser.telemetry.submitEncryptedPing` WebExtension API](https://bugzilla.mozilla.org/show_bug.cgi?id=1634557):
 
 ```console
 FIREFOX_BINARY="/Applications/Firefox Nightly.app/Contents/MacOS/firefox"
