@@ -1,5 +1,7 @@
 {
   "description": "Example Pioneer v2 study.",
+  "hidden": true,
+  "author": "Mozilla",
   "manifest_version": 2,
   "name": "Pioneer-v2",
   "version": "1.0",
@@ -7,7 +9,7 @@
 
   "browser_specific_settings": {
     "gecko": {
-      "id": "pioneer-v2-example@example.com",
+      "id": "pioneer-v2-example@mozilla.org",
       "strict_min_version": "77.0a1"
     }
   },
