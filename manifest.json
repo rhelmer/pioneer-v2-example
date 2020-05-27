@@ -1,6 +1,5 @@
 {
   "description": "Example Pioneer v2 study.",
-  "hidden": true,
   "author": "Mozilla",
   "manifest_version": 2,
   "name": "Pioneer-v2",
