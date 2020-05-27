@@ -7,7 +7,7 @@
   "version": "1.0",
   "homepage_url": "https://github.com/rhelmer/pioneer-v2-example",
 
-  "browser_specific_settings": {
+  "applications": {
     "gecko": {
       "id": "pioneer-v2-example@mozilla.org",
       "strict_min_version": "77.0a1"
