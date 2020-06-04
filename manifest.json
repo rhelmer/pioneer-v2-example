@@ -13,7 +13,7 @@
     }
   },
 
-  "permissions": ["telemetry"],
+  "permissions": ["telemetry", "management"],
 
   "telemetry": {
     "pioneer_id": true,
@@ -29,10 +29,6 @@
         "y": "SB0KnIW-pqk85OIEYZenoNkEyOOp5GeWQhS1KeRtEUE"
       }
     }
-  },
-
-  "browser_action": {
-    "default_title": "Pioneer"
   },
 
   "background": {
