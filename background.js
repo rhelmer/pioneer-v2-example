@@ -23,11 +23,10 @@ sendPing()
   .catch(error => console.error("Could not send ping:", error));
 
 // eslint-disable-next-line no-undef
-browser.runtime.setUninstallURL("https://forms.gle/fLwAS3YUmPm3Qx959");
-
-// eslint-disable-next-line no-undef
-browser.management
-  .uninstallSelf()
+browser.tabs
+  .create({
+    url: "https://forms.gle/fLwAS3YUmPm3Qx959"
+  })
   .then(result =>
     console
       .info("Uninstalled Pioneer v2 demo study")
