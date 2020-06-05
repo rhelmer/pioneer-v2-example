@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 async function sendPing() {
   const currentDate = new Date();
 
@@ -10,7 +11,6 @@ async function sendPing() {
     schemaVersion: 1
   };
 
-  // eslint-disable-next-line no-undef
   await browser.telemetry.submitEncryptedPing(payload, options);
 }
 
@@ -22,7 +22,6 @@ sendPing()
   )
   .catch(error => console.error("Could not send ping:", error));
 
-// eslint-disable-next-line no-undef
 browser.tabs
   .create({
     url: "https://forms.gle/fLwAS3YUmPm3Qx959"
