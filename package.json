@@ -1,6 +1,6 @@
 {
   "name": "pioneer-v2-example",
-  "version": "2.0",
+  "version": "2.0.0",
   "description": "An example Pioneer v2 study.",
   "homepage_url": "https://github.com/mozilla-extensions/pioneer-v2-example",
   "dependencies": {
