@@ -11,13 +11,14 @@ tasks:
           #     enable signing on push/PR. Note, this only works for public
           #     repos for now. Release builds off shipit will get signing for
           #     both public and private repos.
-          xpiSigningType: "privileged"
+          # xpiSigningType: "privileged"
+          xpiSigningType: ""
           # The below doesn't need changing on initial repo setup
           taskgraph:
               branch: taskgraph
               revision: 7dde9ce7740068d7b73218976343a28fc99be847
           template:
-              repo: https://github.com/mozilla-extensions/pioneer-v2-example
+              repo: https://github.com/mozilla-extensions/xpi-template
               branch: master
           trustDomain: xpi
       in:

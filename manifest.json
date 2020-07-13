@@ -3,7 +3,7 @@
   "author": "Mozilla",
   "manifest_version": 2,
   "name": "Pioneer-v2",
-  "version": "1.0",
+  "version": "2.0",
   "homepage_url": "https://github.com/rhelmer/pioneer-v2-example",
 
   "applications": {
@@ -13,7 +13,7 @@
     }
   },
 
-  "permissions": ["telemetry"],
+  "permissions": ["telemetry", "management"],
 
   "telemetry": {
     "pioneer_id": true,
@@ -29,15 +29,6 @@
         "y": "SB0KnIW-pqk85OIEYZenoNkEyOOp5GeWQhS1KeRtEUE"
       }
     }
-  },
-
-  "icons": {
-    "48": "images/pioneer10-patch-48.png",
-    "96": "images/pioneer10-patch-96.png"
-  },
-
-  "browser_action": {
-    "default_title": "Pioneer"
   },
 
   "background": {
