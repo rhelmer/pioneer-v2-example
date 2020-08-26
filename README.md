@@ -2,15 +2,12 @@
 
 An example web extension for Pioneer v2 studies.
 
-This requires [Firefox Nightly](https://nightly.mozilla.org) 78.0a1 (2020-05-17) or newer, which supports the [new `browser.telemetry.submitEncryptedPing` WebExtension API](https://bugzilla.mozilla.org/show_bug.cgi?id=1634557):
+This requires [Firefox](https://www.mozilla.org/en-US/firefox/) 78.0 or newer, which supports the [new `browser.telemetry.submitEncryptedPing` WebExtension API](https://bugzilla.mozilla.org/show_bug.cgi?id=1634557).
+
+NOTE - Only unbranded Firefox builds such as [Nightly](https://nightly.mozilla.org) will be able to load privileged APIs without a special signing key.
 
 ```console
-FIREFOX_BINARY="/Applications/Firefox Nightly.app/Contents/MacOS/firefox"
-TELEMETRY_SERVER="https://stage.ingestion.nonprod.dataops.mozgcp.net"
-PIONEER_ID="a2b94b86-8678-1843-8a4e-a67bae2933f4"
-
-web-ext run --pref=toolkit.telemetry.server="${TELEMETRY_SERVER}" \
-            --pref=extensions.experiments.enabled=true \
+web-ext run --pref=extensions.experiments.enabled=true \
             --pref=toolkit.telemetry.pioneerId="${PIONEER_ID}" \
             --browser-console \
             --firefox-binary "${FIREFOX_BINARY}"
