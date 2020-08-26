@@ -1,4 +1,5 @@
-![alt text](https://raw.githubusercontent.com/rhelmer/pioneer-v2-example/master/images/pioneer10-patch-96.png "Pioneer 10 Patch")
+
+![Pioneer patch](https://raw.githubusercontent.com/rhelmer/pioneer-v2-example/master/images/pioneer10-patch-96.png "Pioneer 10 Patch")
 
 An example web extension for Pioneer v2 studies.
 
