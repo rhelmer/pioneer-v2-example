@@ -1,30 +1,66 @@
-/* eslint-disable no-undef */
-async function sendPing() {
-  const currentDate = new Date();
+console.log("start");
 
-  const payload = {
-    datetime: currentDate
-  };
+let enrolled = false;
 
-  const options = {
-    schemaName: "debug",
-    schemaVersion: 1
-  };
+const result = {
+  enrolled: false,
+  activeStudies: [],
+  availableStudies: [
+    {
+      name: "Demo Study",
+      icons: {
+        32: "https://addons.cdn.mozilla.net/user-media/addon_icons/2644/2644632-32.png?modified=4a64e2bc",
+        64: "https://addons.cdn.mozilla.net/user-media/addon_icons/2644/2644632-64.png?modified=4a64e2bc",
+        128: "https://addons.cdn.mozilla.net/user-media/addon_icons/2644/2644632-128.png?modified=4a64e2bc",
+      },
+      schema: 1597266497978,
+      authors: {
+        url:
+          "https://addons.mozilla.org/en-US/firefox/addon/pioneer-v2-example/",
+        name: "Pioneer Developers",
+      },
+      version: "1.0",
+      addon_id: "pioneer-v2-example@mozilla.org",
+      moreInfo: {
+        spec:
+          "https://addons.mozilla.org/en-US/firefox/addon/pioneer-v2-example/",
+      },
+      isDefault: false,
+      sourceURI: {
+        spec:
+          "https://addons.mozilla.org/firefox/downloads/file/3579857/pioneer_v2-1.0-fx.xpi",
+      },
+      studyType: "extension",
+      studyEnded: false,
+      description: "Study purpose: Testing Pioneer.",
+      privacyPolicy: {
+        spec:
+          "https://addons.mozilla.org/en-US/firefox/addon/pioneer-v2-example/",
+      },
+      joinStudyConsent:
+        "This study will send an encrypted ping, only when the toolbar icon is clicked.",
+      leaveStudyConsent: "This study cannot be re-joined.",
+      dataCollectionDetails: ["The date and time"],
+      id: "0eb02750-7159-4f09-96ae-5c7cb7424e89",
+      last_modified: 1597280277565,
+    },
+  ],
+};
 
-  await browser.telemetry.submitEncryptedPing(payload, options);
-}
+chrome.runtime.onMessageExternal.addListener(function(
+  request,
+  sender,
+  sendResponse
+) {
+  console.log("Ion enrolled?:", enrolled);
+  console.log("received in extension", request, sender, sendResponse);
+  console.log(request);
+  if ("enroll" in request) {
+    result.enrolled = true;
+  } else if ("unenroll" in request) {
+    result.enrolled = false;
+  }
+  sendResponse(result);
+});
 
-sendPing()
-  .then(result =>
-    console.info(
-      "Telemetry submitted, check about:telemetry archived ping data."
-    )
-  )
-  .catch(error => console.error("Could not send ping:", error));
-
-browser.tabs
-  .create({
-    url: "https://forms.gle/fLwAS3YUmPm3Qx959"
-  })
-  .then(result => console.info("Pioneer v2 survey launched"))
-  .catch(error => console.error("Could not launch Pioneer v2 survey:", error));
+console.log("done");
